@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="author" content="Bianca Salcedo">
+    <meta name="description" content="Black and White"/>
+    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
+    <title>Desafio Latam</title>
+  </head>
+  <body>
+    <div class="container-fluid text-white container">
+      <form action="/formulario" method="POST">
+        <div class="mb-3">
+          <h1>Black and White Spa</h1>
+          <label for="imageUrl" class="form-label mt-3">Imagen URL:</label>
+          <br>
+          <input type="url" id="imageUrl" placeholder="URL de la imagen o ruta local" name="imageUrl" required />
+        </div>
+        <button type="submit" class="btn btn-dark mb-3 border-5 border-white">Subir Imagen al Servidor</button>
+      </form>
+    </div>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  </body>
+</html>
