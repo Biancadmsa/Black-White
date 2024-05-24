@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Bianca Salcedo">
     <meta name="description" content="Black and White"/>
-    <link rel="stylesheet" href="/style.css" />
+    <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"/>
-    <title>Desafio Latam</title>
-  </head>
-  <body>
-    <div class="container-fluid text-white container">
-      <form action="/images" method="POST">
-        <div class="mb-3">
-          <h1>Black and White Spa</h1>
-          <label for="imageUrl" class="form-label mt-3">Imagen URL:</label>
-          <br>
-          <input type="url" id="imageUrl" placeholder="URL de la imagen o ruta local" name="imageUrl" required />
-        </div>
-        <button type="submit" class="btn btn-dark mb-3 border-5 border-white">Subir Imagen al Servidor</button>
-      </form>
+    <title>Black and White Image Processor</title>
+    <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Bienvenido a ¡black and white!</h2>
+        <p>Black and white es una web donde podras convertir tus imagenes a blanco y negro , puedes probar escribiendo la URL de la imagen que quieres convertir a continuacion:</p>
+        <form action="/procesarimagen" method="post">
+            <label for="imageUrl">Ingresa aqui la URL:</label>
+            <input type="text" id="imageUrl" name="imageUrl" required>
+            <button type="submit" id="enviar">Procesar Imagen</button>
+            <button type="button" id="clearButton">Limpiar</button>
+        </form>
     </div>
-    <script src="https://wp-content.miviaje.com/2017/11/nueva-york.jpg?auto=webp&quality=60&width=1920&crop=16:9,smart,safe"></script>
+    <script>
+        document.getElementById('clearButton').addEventListener('click', function() {
+            document.getElementById('imageUrl').value = '';
+        });
+    </script>
   </body>
 </html>

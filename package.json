@@ -2,7 +2,7 @@
   "name": "proyecto6",
   "version": "1.0.0",
   "description": "Proyecto final modulo 6",
-  "main": "index.js",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,6 +15,5 @@
     "path": "^0.12.7",
     "url": "^0.11.3",
     "uuid": "^9.0.1"
-  },
-  "type": "module"
+  }
 }
