@@ -1,11 +1,11 @@
 Seguir las siguientes pasos para ejecutar:
 
- 1-  instalar las dependencias en la consola:
+ 1-  Instalar las dependencias en la terminal:
  npm i express jimp path uuid nodemon
 
- 2- levanta con nodemon.
+ 2- Levanta con nodemon.
 
-3- sSugerencias de algunas url de imagenes:
+3- Sugerencias de algunas url de imagenes:
 
 https://cdn.pixabay.com/photo/2023/01/08/13/35/ki-generated-7705184_640.jpg
 
