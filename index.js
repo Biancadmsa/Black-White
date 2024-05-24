@@ -18,28 +18,23 @@ app.use(express.urlencoded({ extended: true }));
 
 // Manejar la presentación del formulario
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "/public/index.html"));
+  res.sendFile(path.join(__dirname, "public", "index.html"));
 });
 
 // Manejar la presentación del formulario
-app.post("/formulario", async (req, res) => {
+app.post("/images", async (req, res) => {
   const imageUrl = req.body.imageUrl;
 
   try {
-    
     const image = await Jimp.read(imageUrl);// Leer la imagen desde la URL
-
-    
     image.grayscale();// Convertir la imagen a escala de grises
-
-   
     image.resize(350, Jimp.AUTO); // Redimensionar la imagen a 350px de ancho
 
     // Generar un UUID para el nombre del archivo
     const uuid = uuidv4();
 
     await image.writeAsync(
-      path.join(__dirname, "public/images", `${uuid}.jpg`)
+      path.join(__dirname, "public", "images", `${uuid}.jpg`)
     ); // Guardar la imagen en el directorio "public/images"
     res.redirect(`/images/${uuid}.jpg`); // Redirigir al usuario a la página de la imagen
   } catch (error) {
@@ -48,7 +43,7 @@ app.post("/formulario", async (req, res) => {
   }
 });
 
-app.get("/formulario", async (req, res) => {
+app.get("/images", async (req, res) => {
   res.setHeader("Content-Type", "image/png");
   try {
     const imagen = await Jimp.read(
