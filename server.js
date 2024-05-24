@@ -4,7 +4,7 @@ const Jimp = require('jimp');
 const { v4: uuidv4 } = require('uuid');
 
 const app = express();
-const PORT = 3009;
+const PORT = 3005;
 
 // Configurar middleware para servir archivos estáticos y parsear el cuerpo de las solicitudes
 app.use(express.static(path.join(__dirname, 'public')));
