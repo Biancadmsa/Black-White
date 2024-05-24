@@ -6,6 +6,6 @@ Seguir las siguientes pasos para ejecutar:
  2- Utilizar como ejemplo la siguiente url para el campo de procesar la imagen:
  https://miviaje.com/wp-content/uploads/2016/05/shutterstock_337174700.jpg
 
- 3- levantar con node index.js
+ 3- levantar con node server.js
 
 😊
